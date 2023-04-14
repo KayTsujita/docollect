@@ -30,6 +30,8 @@ div {
   position: relative;
 }
 
+/* ログイン画面 */ 
+
 .log-in {
   position: absolute;
   top: 30%;
@@ -55,5 +57,50 @@ div {
 }
 
 .actions {
-  margin-bottom: 10px;
+  margin: 10px 0 20px 0;
+}
+
+/* 新規登録画面 */ 
+
+.Sign-up {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+}
+
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 200px;
+  margin: 5px 10px 0 0;
+  height: 38px;
+  line-height: 18px;
+  padding: 10px 10px 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.input-sign-up {
+  width: 410px;
+  margin-top: 5px;
+  height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
 }

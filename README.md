@@ -22,6 +22,7 @@
 | Column                | Type          | Options                        |
 | --------------------- | ------------- | ------------------------------ |
 | group_name            | string        | null: false                    |
+| group_image           | string        | null: false                    |
 | user_id               | references    | null: false, foreign_key: true |
 
 ### Association

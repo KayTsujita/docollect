@@ -33,8 +33,8 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | document_title     | string     | null: false                    |
+| description        | text       | null: false                    |
 | document_image     | references | null: false                    |
-| description        | references | null: false                    |
 | user_id            | references | null: false, foreign_key: true |
 | group_id           | references | null: false, foreign_key: true |
 

@@ -9,4 +9,10 @@ class GroupsController < ApplicationController
 
   def create
   end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:group_name, :image).merge(user_id: current_user.id)
+  end
 end

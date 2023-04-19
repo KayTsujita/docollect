@@ -39,7 +39,6 @@ header {
   justify-content: center;
   align-items: center;
   margin: 50px 0 0 50px;
-
 }
 
 .group-btn a {
@@ -54,6 +53,44 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.group-lists {
+  margin: 100px;
+}
+
+.list {
+  position: relative;
+  display: inline-block;
+}
+
+.group-list {
+  text-decoration: none;
+  color: black;
+  }
+
+.group-image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.group-name {
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  bottom:  5px;
+  left: 15px;
+  object-fit: cover;
+}
+
+.arrow-btn {
+  position: absolute;
+  font-size: 26px;
+  top: 15px;
+  left: 330px
 }
 
 /* グループ新規作成ページ */

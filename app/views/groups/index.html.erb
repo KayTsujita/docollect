@@ -8,6 +8,18 @@
   </div>
 </div>
 
-<div class="group-wrapper">
-  <%# <%= image_tag group.image, class: 'group-image' if group.image.attached?%>
-</div>
+<ul class="group-lists">
+  <% @groups.each do |group| %>
+    <li class='list'>
+      <%= link_to "#", class: "group-list" do %>
+        <%= image_tag group.image.variant( type: :grayscale ), class: 'group-image' %>
+        <div class="group-name">
+          <p><%= group.group_name %></p>
+        </div>
+        <div class="arrow-btn">
+          <h2>＞</h2>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

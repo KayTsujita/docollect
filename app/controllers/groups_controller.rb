@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    # @groups = Group.new.all
+    @groups = Group.all
   end
 
   def new
@@ -8,6 +8,15 @@ class GroupsController < ApplicationController
   end
 
   def create
+    @group = Group.new(group_params)
+    if @group.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def show
   end
 
   private

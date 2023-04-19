@@ -10,8 +10,8 @@
   <div class="group-content">
     <%= form_with model: @group, local: true do |f|%>
       <div class="field-login">
-        <%= f.label :title, "グループ名" %><br />
-        <%= f.text_area :title, class:"group-text", id:"group-name" %>
+        <%= f.label :group_name, "グループ名" %><br />
+        <%= f.text_area :group_name, class:"group-text", id:"group-name" %>
       </div>
 
       <div class="field-login">

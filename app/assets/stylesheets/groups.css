@@ -49,3 +49,37 @@ header {
   font-weight: 300;
 }
 
+.group-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* グループ新規作成ページ */
+.group-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 50%;
+  padding: 100px 0;
+}
+
+.page-heading {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 50px 0;
+}
+
+.field-login {
+  margin-bottom: 30px;
+  color: #4a4a4a;
+}
+
+.group-text {
+  width: 100%;
+  height: 30px;
+  font-size:16px;
+  padding:5px;
+  resize: none;
+}

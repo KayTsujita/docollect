@@ -66,7 +66,7 @@ header {
 
 .group-list {
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
   }
 
 .group-image {
@@ -88,9 +88,9 @@ header {
 
 .arrow-btn {
   position: absolute;
-  font-size: 26px;
+  font-size: 30px;
   top: 15px;
-  left: 330px
+  left: 320px
 }
 
 /* グループ新規作成ページ */

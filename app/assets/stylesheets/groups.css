@@ -1,6 +1,6 @@
 header {
   height: 100px;
-  background-color: #2b4a9d;
+  background: #545454;
   padding-left: 30px;
   padding-right: 50px;
   display: flex;
@@ -39,7 +39,6 @@ header {
   justify-content: center;
   align-items: center;
   margin: 50px 0 0 50px;
-
 }
 
 .group-btn a {
@@ -49,3 +48,75 @@ header {
   font-weight: 300;
 }
 
+.group-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-lists {
+  margin: 100px;
+}
+
+.list {
+  position: relative;
+  display: inline-block;
+}
+
+.group-list {
+  text-decoration: none;
+  color: #FFFFFF;
+  }
+
+.group-image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.group-name {
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  bottom:  5px;
+  left: 15px;
+  object-fit: cover;
+}
+
+.arrow-btn {
+  position: absolute;
+  font-size: 30px;
+  top: 15px;
+  left: 320px
+}
+
+/* グループ新規作成ページ */
+.group-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 50%;
+  padding: 100px 0;
+}
+
+.page-heading {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 50px 0;
+}
+
+.field-login {
+  margin-bottom: 30px;
+  color: #4a4a4a;
+}
+
+.group-text {
+  width: 100%;
+  height: 30px;
+  font-size:16px;
+  padding:5px;
+  resize: none;
+}

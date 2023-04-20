@@ -4,10 +4,22 @@
 
 <div class="group-btn-wrapper">
   <div class="group-btn">
-    <%= link_to "グループを作成する", "#" %>
+    <%= link_to "グループを作成する", new_group_path %>
   </div>
 </div>
 
-<div class="group-wrapper">
-  <%# <%= render partial: "#", collection: %>
-</div>
+<ul class="group-lists">
+  <% @groups.each do |group| %>
+    <li class='list'>
+      <%= link_to "#", class: "group-list" do %>
+        <%= image_tag group.image, class: 'group-image' %>
+        <div class="group-name">
+          <p><%= group.group_name %></p>
+        </div>
+        <div class="arrow-btn">
+          <h2>＞</h2>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

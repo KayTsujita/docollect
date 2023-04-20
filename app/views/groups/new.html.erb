@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <%= render "header" %>
+</div>
+<div class="group-wrapper">
+  <div class="page-heading">
+    <h2>新規グループ作成</h2>
+  </div>
+</div>
+<div class="group-wrapper">
+  <div class="group-content">
+    <%= form_with model: @group, local: true do |f|%>
+      <div class="field-login">
+        <%= f.label :group_name, "グループ名" %><br />
+        <%= f.text_area :group_name, class:"group-text", id:"group-name" %>
+      </div>
+
+      <div class="field-login">
+        <p>
+          クリックして画像をアップロード
+        </p>
+        <%= f.file_field :image, id:"group-image" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "作成する", class: "group-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

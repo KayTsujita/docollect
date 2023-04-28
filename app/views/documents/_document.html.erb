@@ -1,0 +1,16 @@
+<ul class = "group-lists">
+  <% @documents.each do |document| %>
+    <li class='list'>
+    <% if document.pdf.representable? %>
+    <%= link_to image_tag document.pdf.representation(resize: '300x300'), class: 'document_list' if document.pdf.attached? %>
+    <%# <%= image_tag group.image, class: 'group-image' %>
+        <div class="document_name">
+          <p><%= document.document_title %></p>
+        </div>
+    <% else %>
+    <%= link_to rails_blob_path(document.pdf, disposition: "attachment") do %>
+    <% end %>
+    <% end %>
+    </li>
+  <% end %>
+</ul>

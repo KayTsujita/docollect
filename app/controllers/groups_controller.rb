@@ -18,6 +18,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @document = Document.new
+    @documents = @group.documents.includes(:user)
   end
 
   private

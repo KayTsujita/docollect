@@ -18,7 +18,9 @@ class DocumentsController < ApplicationController
     end
   end
 
-  private def document_params
+  private 
+  
+  def document_params
     params.require(:document).permit(:document_title, :description, :pdf).merge(user_id: current_user.id)
   end
 

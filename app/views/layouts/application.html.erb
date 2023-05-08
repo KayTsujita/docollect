@@ -15,6 +15,22 @@
 
   <body>
 
+  <% if user_signed_in? %>
+    <header>
+      <div class='logo'>
+        <%= link_to 'DoCollect', root_path %>
+      </div>
+      <div class='status'>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    </header>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>

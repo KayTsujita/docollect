@@ -1,22 +1,29 @@
-<div class="wrapper">
-  <%= render "header" %>
-</div>
-
-<div class="group-btn-wrapper">
-  <div class="group-btn">
-    <%= link_to "資料のアップロード", new_group_path %>
+<div class="document-btn-wrapper">
+  <div class="upload-btn">
+    <%= form_with model: [@group, @document], local: true do |f| %>
+      <div class="field-title">
+        <%= "資料タイトル" %>
+        <%= f.text_area :document_title, class:"document-text", id:"document-name" %>
+      </div>
+      <div class="field-login">
+        <%= "資料説明" %>
+        <%= f.text_area :description, class:"description-text", id:"description-name" %>
+      </div>
+      <div class="document-file">
+          <%= f.file_field :pdf, id:"document-file" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "アップロードする", class: "group-btn" %>
+      </div>
+    <% end %>
   </div>
 </div>
-<%# 
-<ul class="group-lists"> %>
-  <%# <% @documents.each do |document| %>
-    <li class='list'>
-      <%# <%= link_to "#" class: "document-list" do %>
-        <%# <%= image_tag group.image, class: 'group-image' %>
-        <div class="group-name">
-          <%# <p><%= group.group_name %></p>
-        </div>
-      <%# <% end %>
-    </li>
-  <%# <% end %>
-<%# </ul> %>
+
+
+
+        <%# // ログインしているユーザーには上記を表示する %>
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+
+<div class="user__card">
+  <%= render partial: "documents/document", collection: @group.documents %>
+</div>

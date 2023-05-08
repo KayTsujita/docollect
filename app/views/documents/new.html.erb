@@ -1,0 +1,38 @@
+
+<%
+=begin
+%>
+<div class="group-wrapper">
+  <div class="page-heading">
+    <h2>資料アップロード</h2>
+  </div>
+</div>
+<div class="group-wrapper">
+  <div class="group-content">
+    <%= form_with model: @document, local: true do |f| %>
+      <div class="field-login">
+        <%= "資料タイトル" %><br />
+        <%= f.text_area :document_title, class:"document-text", id:"document-name" %>
+      </div>
+      <div class="field-login">
+        <%= "資料説明" %><br />
+        <%= f.text_area :description, class:"description-text", id:"description-name" %>
+      </div>
+
+      <div class="field-login">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :pdf, id:"group-image" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "アップロードする", class: "group-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%
+=end
+%>

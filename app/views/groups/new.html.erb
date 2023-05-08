@@ -1,6 +1,3 @@
-<div class="wrapper">
-  <%= render "header" %>
-</div>
 <div class="group-wrapper">
   <div class="page-heading">
     <h2>新規グループ作成</h2>
@@ -10,7 +7,7 @@
   <div class="group-content">
     <%= form_with model: @group, local: true do |f|%>
       <div class="field-login">
-        <%= f.label :group_name, "グループ名" %><br />
+        <%= "グループ名" %><br />
         <%= f.text_area :group_name, class:"group-text", id:"group-name" %>
       </div>
 

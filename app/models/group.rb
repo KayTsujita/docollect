@@ -4,5 +4,6 @@ class Group < ApplicationRecord
   has_many :documents
 
   validates :group_name,     presence: true
-  validates :image,          presence: true
+  validates :pdf,          presence: true
 end
+

@@ -8,12 +8,12 @@
   <% @groups.each do |group| %>
     <li class='list'>
       <%= link_to group_path(group.id), get: :method, class: "group-list" do %>
-        <%= image_tag group.image, class: 'group-image' %>
+        <%= image_tag(group.image, class: 'group-image') %>
         <div class="group-name">
           <p><%= group.group_name %></p>
         </div>
         <div class="arrow-btn">
-          <h2>＞</h2>
+          <h2>"＞"</h2>
         </div>
       <% end %>
     </li>

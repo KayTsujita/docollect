@@ -18,6 +18,14 @@ class DocumentsController < ApplicationController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.pdf do
+        send_file(@pdf, filename: 'document_title', type: 'application/pdf', disposition: :inline)
+      end
+    end
+  end
+
   private 
   
   def document_params
